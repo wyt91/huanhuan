@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>甄嬛传 - 文字冒险 (JavaScript版)</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">  </head>
+<body>
+
+    <div id="game-container">  <div id="scene-container" class="scene">  <h1>甄嬛传 - 入宫 (JavaScript版)</h1>
+            <p>雍正年间，你，甄嬛，以秀女身份入宫。巍峨的宫门缓缓开启...</p>
+            <h2>你现在站在宫门口，第一个念头是？</h2>
+            <ul class="options">
+                <li><button onclick="showScene('chenwen')">保持沉稳，静观其变</button></li>
+                <li><button onclick="showScene('zhanlu')">展露才情，争取瞩目</button></li>
+                <li><button onclick="showScene('diandao')">低调谨慎，避免是非</button></li>
+            </ul>
+        </div>
+
+        <div id="chenwen" class="scene" style="display: none;">
+            <h2>第一步：沉稳内敛</h2>
+            <p>你选择收敛锋芒，表现得沉稳内敛...</p>
+            <p>选秀在即，你觉得自己应该...</p>
+            <ul class="options">
+                <li><button onclick="showScene('chenwen_success')">继续保持低调，等待机会</button></li>
+                <li><button onclick="showScene('chenwen_fail')">适当展露一些才华，争取被选中</button></li>
+            </ul>
+        </div>
+
+        <div id="chenwen_success" class="scene" style="display: none;">
+            <h2>沉稳的成功</h2>
+            <p>你坚持沉稳的策略，在选秀时表现得不卑不亢...</p>
+            <p>接下来，你打算如何在这后宫中生存？</p>
+            <ul class="options">
+                <li><button onclick="showScene('chenwen_anjin')">安分守己，保全自身</button></li>
+                <li><button onclick="showScene('chenwen_zhengchong')">伺机而动，争取恩宠</button></li>
+            </ul>
+        </div>
+
+        <div id="ending_perfect" class="scene ending" style="display: none;">
+            <h2>完美结局：母仪天下</h2>
+            <p>恭喜你！凭借你的智慧、才情和运筹帷幄...</p>
+             <p> <button onclick="showScene('start')">重新开始</button></p>
+         </div>
+
+        <div id="ending_normal" class="scene ending" style="display: none;">
+            <h2>普通结局：安稳一生</h2>
+            <p>虽然 не достигла 最高权位, 但你凭借 your intelligence and carefulness...</p>
+             <p> <button onclick="showScene('start')">重新开始</button></p>
+         </div>
+
+         <div id="ending_bad" class="scene ending" style="display: none;">
+            <h2>悲惨结局：红颜薄命</h2>
+            <p>可惜... 你在 жестокой 后宫争斗中 败下阵来...</p>
+             <p> <button onclick="showScene('start')">重新开始</button></p>
+         </div>
+
+
+         <div id="chenwen_anjin" class="scene" style="display: none;">
+            <h2>安分守己，保全自身 (分支)</h2>
+            <p>你选择安分守己，不参与后宫争斗，只求保全自身...</p>
+             <p>长此以往， 你会... </p>
+            <ul class="options">
+                <li><button onclick="showScene('ending_normal')">安稳度过一生 (普通结局)</button></li>
+                <li><button onclick="showScene('chenwen_anjin_change')">厌倦平淡，想要争取改变</button></li>
+            </ul>
+        </div>
+
+        </div>
+
+    <script src="script.js"></script>  </body>
+</html>
