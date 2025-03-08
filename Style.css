@@ -1,0 +1,56 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f8f8f8;
+}
+
+#game-container {
+    max-width: 800px;
+    margin: 0 auto; /* 水平居中 */
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.scene {
+    margin-bottom: 20px;
+    padding: 20px; /* 增加 padding */
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 8px; /* 圆角 */
+    box-shadow: 2px 2px 5px #eee; /* 阴影效果 */
+}
+
+.options {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* 选项居中 */
+}
+
+.options li {
+    margin-bottom: 10px;
+}
+
+.options li button { /* 修改为 button 样式 */
+    display: inline-block;
+    padding: 10px 25px; /* 增加 padding */
+    background-color: #eee;
+    color: #333;
+    border: none; /* 去掉边框 */
+    border-radius: 8px; /* 圆角 */
+    font-size: 1em; /* 字体大小 */
+    cursor: pointer; /* 鼠标悬停时显示手指 */
+    transition: background-color 0.3s ease; /* 平滑过渡效果 */
+}
+
+.options li button:hover { /* 鼠标悬停效果 */
+    background-color: #ddd;
+}
+
+.ending {
+    font-weight: bold;
+    color: darkred;
+    text-align: center; /* 结局场景文字居中 */
+}
